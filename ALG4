@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+	var tamanho int
+	fmt.Print("Informe o tamanho do Slice: ")
+	fmt.Scan(&tamanho)
+
+	slice := make([]int, tamanho)
+
+	fmt.Println("Informe os valores dos elementos do Slice:")
+	soma := 0
+	for i := 0; i < tamanho; i++ {
+		fmt.Printf("Elemento %d: ", i+1)
+		fmt.Scan(&slice[i])
+		soma += slice[i]
+	}
+
+	fmt.Println("O Slice é:", slice)
+	fmt.Println("A soma dos valores no Slice é:", soma)
+}
