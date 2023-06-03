@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [10]int{3, 6, 9, 12, 15, 18, 21, 24, 27, 30}
+
+	var valor int
+	fmt.Print("Informe um valor: ")
+	fmt.Scan(&valor)
+
+	encontrado := false
+	for _, num := range array {
+		if num == valor {
+			encontrado = true
+			break
+		}
+	}
+
+	if encontrado {
+		fmt.Println("O valor está presente no Array.")
+	} else {
+		fmt.Println("O valor não está presente no Array.")
+	}
+}
