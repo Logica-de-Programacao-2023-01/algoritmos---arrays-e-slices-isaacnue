@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [10]int{3, 6, 9, 12, 15, 18, 21, 24, 27, 30}
+
+	slice := make([]int, 0)
+
+	for _, num := range array {
+		if num%2 == 0 {
+			slice = append(slice, num)
+		}
+	}
+
+	fmt.Println("O novo Slice é:", slice)
+}
