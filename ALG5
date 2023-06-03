@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [3][2]int{}
+
+	fmt.Println("Informe os valores para a matriz:")
+
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Printf("Elemento [%d][%d]: ", i, j)
+			fmt.Scan(&array[i][j])
+		}
+	}
+
+	fmt.Println("A matriz resultante é:")
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Printf("%d ", array[i][j])
+		}
+		fmt.Println()
+	}
+}
