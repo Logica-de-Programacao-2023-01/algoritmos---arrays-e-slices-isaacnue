@@ -1,0 +1,35 @@
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Print("Informe um número inteiro positivo: ")
+	fmt.Scan(&n)
+
+	primeirosPrimos := make([]int, 0)
+	i := 2
+
+	for len(primeirosPrimos) < n {
+		if isPrimo(i) {
+			primeirosPrimos = append(primeirosPrimos, i)
+		}
+		i++
+	}
+
+	fmt.Println("Array com os", n, "primeiros números primos:", primeirosPrimos)
+}
+
+func isPrimo(num int) bool {
+	if num <= 1 {
+		return false
+	}
+
+	for i := 2; i*i <= num; i++ {
+		if num%i == 0 {
+			return false
+		}
+	}
+
+	return true
+}
