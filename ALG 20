@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := []int{1, 2, 3, 4, 5, 6, 7}
+
+	ordenado := true
+	for i := 1; i < len(array); i++ {
+		if array[i] < array[i-1] {
+			ordenado = false
+			break
+		}
+	}
+
+	if ordenado {
+		fmt.Println("O array está ordenado em ordem crescente.")
+	} else {
+		fmt.Println("O array não está ordenado em ordem crescente.")
+	}
+}
