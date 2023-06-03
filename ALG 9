@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [6]float64{}
+
+	var num float64
+	fmt.Print("Informe um número: ")
+	fmt.Scan(&num)
+
+	for i := 0; i < len(array); i++ {
+		array[i] = num
+	}
+
+	fmt.Println("O Array resultante é:", array)
+}
