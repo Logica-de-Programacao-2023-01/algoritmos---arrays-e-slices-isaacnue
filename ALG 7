@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func main() {
+	slice := make([]int, 0, 5)
+
+	for len(slice) < 5 {
+		var num int
+		fmt.Print("Informe um número inteiro: ")
+		fmt.Scan(&num)
+
+		// Verifica se o número já está presente no Slice
+		jaPresente := false
+		for _, valor := range slice {
+			if valor == num {
+				jaPresente = true
+				break
+			}
+		}
+
+		// Adiciona o número ao Slice se não estiver presente
+		if !jaPresente {
+			slice = append(slice, num)
+		}
+	}
+
+	fmt.Println("O Slice resultante é:", slice)
+}
