@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [10]float64{3.5, 6.2, 9.8, 2.1, 7.4, 1.9, 5.3, 8.6, 4.7, 0.5}
+
+	slice := make([]float64, 0)
+
+	for _, num := range array {
+		if num > 5 {
+			slice = append(slice, num)
+		}
+	}
+
+	fmt.Println("O novo Slice é:", slice)
+}
